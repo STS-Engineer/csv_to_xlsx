@@ -315,7 +315,6 @@ def get_first_available_column(df, columns):
             return df[col]
     return None  # Return None if no column matches
 
-
 def process_csv(file, customer_code, customer_name):
     encoding = detect_encoding(file)
     df = pd.read_csv(file, delimiter=';', encoding=encoding, on_bad_lines='skip')
